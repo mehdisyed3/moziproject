@@ -21,7 +21,7 @@ function App() {
 
       let isNumber = parseInt(arr[i])
 
-      if (isNumber || arr[i] === '0' || arr[i] === '/' || arr[i] === '(' || arr[i] === ')') {
+      if (isNumber || arr[i] === '0' || arr[i] === '/' || arr[i] === '(' || arr[i] === ')'|| arr[i]=== '.') {
         string.push(arr[i])
       }
       if (arr[i] === '\t' || arr[i] === '\n' || i === arr.length - 1) {
