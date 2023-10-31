@@ -21,7 +21,7 @@ function App() {
 
       let isNumber = parseInt(arr[i])
 
-      if (isNumber || arr[i] === '0' || arr[i] === '/' || arr[i] === '(' || arr[i] === ')'|| arr[i]=== '.') {
+      if (isNumber || arr[i] === '0' || arr[i] === '/' || arr[i] === '(' || arr[i] === ')' || arr[i]=== '.') {
         string.push(arr[i])
       }
       if (arr[i] === '\t' || arr[i] === '\n' || i === arr.length - 1) {
@@ -43,7 +43,6 @@ function App() {
     }
     finalArray?.reverse()
 
-    // console.log('>>>> EXTRACT', finalArray)
 
     let previousDayOfMonth = 1
     let amount = startingBalance
@@ -51,7 +50,6 @@ function App() {
     const interestRate = ((rateOfInterest / 100) / 365)
 
 
-    console.log('>>> 30', interestRate)
 
     //loop to calculate
 
@@ -60,7 +58,6 @@ function App() {
       const date = new Date(finalArray[x][0]);
       const dayOfMonth = date.getDate();
 
-      console.log('>>> days on interest', dayOfMonth - previousDayOfMonth)
       let interestRateSinceLastTransaction = (dayOfMonth - previousDayOfMonth) * interestRate * amount
       accumulatedInterestAmount = accumulatedInterestAmount + interestRateSinceLastTransaction
       // console.log('>>> accumulated interestRate', accumulatedInterestAmount)
@@ -129,7 +126,7 @@ function App() {
         <div style={{display:'flex'}}>
         <textarea
           type="text"
-          style={{ width: '600px', height: '300px', marginTop: '15px' }} // Set the width to 400 pixels
+          style={{ width: '800px', height: '300px', marginTop: '15px' }} // Set the width to 400 pixels
           value={textareaValue}
           onChange={handleTextareaChange}
         />
